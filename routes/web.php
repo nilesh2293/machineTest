@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ScheduleController@list')->name('home');
+
+Route::post('/', 'ScheduleController@generateSchedule');
